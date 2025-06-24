@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MdViewModule, MdViewList, MdSort, MdFilterList } from 'react-icons/md';
 import { StoryCard } from './StoryCard';
-import { Button } from '../ui/Button';
-import { Loading } from '../ui/Loading';
+import { Button } from '../UI/Button';
+import { Loading } from '../UI/Loading';
 
 interface StoryListProps {
   stories: Array<any>;
