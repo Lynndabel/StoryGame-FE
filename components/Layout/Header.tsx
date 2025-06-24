@@ -2,17 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FiMenu, 
-  FiX, 
-  FiSearch, 
-  FiBell, 
-  FiSun, 
-  FiMoon,
-  FiUser,
-  FiSettings,
-  FiLogOut
-} from 'react-icons/fi';
+import { FiMenu, FiX, FiSearch, FiBell, FiSun, FiMoon, FiUser, FiSettings, FiLogOut } from 'react-icons/fi';
 import { MdAutoStories, MdHowToVote, MdCreate, MdExplore } from 'react-icons/md';
 import { Button } from '../UI/Button';
 import { Input } from '../UI/Input';
