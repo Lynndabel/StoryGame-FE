@@ -4,19 +4,12 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { motion } from 'framer-motion';
-import { 
-  MdTitle,
-  MdDescription,
-  MdCloudUpload,
-  MdCategory,
-  MdAccountBalanceWallet,
-  MdInfo,
-  MdWarning
-} from 'react-icons/md';
-import { Button } from '../ui/Button';
-import { Input } from '../ui/Input';
-import { Card } from '../ui/Card';
-import { Badge } from '../ui/Badge';
+import { MdTitle, MdDescription, MdCloudUpload, MdCategory, MdAccountBalanceWallet,
+  MdInfo, MdWarning } from 'react-icons/md';
+import { Button } from '../UI/Button';
+import { Input } from '../UI/Input';
+import { Card } from '../UI/Card';
+import { Badge } from '../UI/Badge';
 
 const proposalSchema = z.object({
   title: z.string().min(10, 'Title must be at least 10 characters').max(100, 'Title too long'),
