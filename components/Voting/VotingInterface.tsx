@@ -1,5 +1,5 @@
 // src/components/voting/VotingInterface.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MdHowToVote,
@@ -226,7 +226,7 @@ export const VotingInterface: React.FC<VotingInterfaceProps> = ({
         {onDelegate && userTokenBalance > 0 && (
           <div className="border-t border-dark-700 pt-4">
             <p className="text-dark-400 text-sm mb-2">
-              Don't want to vote yourself? Delegate your voting power to someone you trust.
+              You do not want to vote yourself? Delegate your voting power to someone you trust.
             </p>
             <Button variant="ghost" size="sm" onClick={() => {}}>
               Delegate Voting Power

@@ -5,11 +5,10 @@ import {
   MdTrendingUp,
   MdTrendingDown,
   MdPeople,
-  MdAccountBalanceWallet,
   MdAccessTime
 } from 'react-icons/md';
-import { Card } from '../ui/Card';
-import { Badge } from '../ui/Badge';
+import { Card } from '../UI/Card';
+import { Badge } from '../UI/Badge';
 
 interface VotingResultsProps {
   results: {
