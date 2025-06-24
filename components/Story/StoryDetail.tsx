@@ -15,9 +15,9 @@ import {
   MdTrendingUp
 } from 'react-icons/md';
 import { FiExternalLink, FiUsers } from 'react-icons/fi';
-import { Card } from '../ui/Card';
-import { Badge } from '../ui/Badge';
-import { Button } from '../ui/Button';
+import { Card } from '../UI/Card';
+import { Badge } from '../UI/Badge';
+import { Button } from '../UI/Button';
 import { ChapterList } from './ChapterList';
 
 interface StoryDetailProps {

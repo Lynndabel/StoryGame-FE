@@ -11,9 +11,9 @@ import {
   MdTitle,
   MdCategory
 } from 'react-icons/md';
-import { Button } from '../ui/Button';
-import { Input } from '../ui/Input';
-import { Card } from '../ui/Card';
+import { Button } from '../UI/Button';
+import { Input } from '../UI/Input';
+import { Card } from '../UI/Card';
 
 const storySchema = z.object({
   title: z.string().min(3, 'Title must be at least 3 characters').max(100, 'Title too long'),

@@ -1,16 +1,13 @@
 // src/components/story/ChapterList.tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MdViewList,
-  MdViewModule,
-  MdSort,
+import { MdViewList, MdViewModule,MdSort,
   MdFilterList,
   MdPlaylistAdd
 } from 'react-icons/md';
 import { ChapterCard } from './ChapterCard';
-import { Button } from '../ui/Button';
-import { Loading } from '../ui/Loading';
+import { Button } from '../UI/Button';
+import { Loading } from '../UI/Loading';
 
 interface ChapterListProps {
   chapters: Array<any>;

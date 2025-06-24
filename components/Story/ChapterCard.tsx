@@ -3,9 +3,9 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {  MdPerson, MdAccessTime, MdHowToVote, MdVisibility, MdStar,MdLock, MdCheckCircle} from 'react-icons/md';
-import { Card } from '../Ui/Card';
-import { Badge } from '../Ui/Badge';
-import { Button } from '../Ui/Button';
+import { Card } from '../UI/Card';
+import { Badge } from '../UI/Badge';
+import { Button } from '../UI/Button';
 
 interface ChapterCardProps {
   chapter: {
