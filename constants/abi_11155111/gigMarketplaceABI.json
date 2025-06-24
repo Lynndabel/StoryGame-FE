@@ -1,0 +1,289 @@
+[
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_registry", "type": "address" },
+      {
+        "internalType": "address",
+        "name": "_paymentProcessor",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "gigId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "artisan",
+        "type": "address"
+      }
+    ],
+    "name": "ArtisanHired",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "gigId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ArtisanMarkCompleted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "gigId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ClientConfirmCompleted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "gigId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "artisan",
+        "type": "address"
+      }
+    ],
+    "name": "GigApplicationSubmitted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "gigId",
+        "type": "uint256"
+      }
+    ],
+    "name": "GigClosed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "gigId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "client",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "rootHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "GigCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "gigId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "newRootHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "GigStateUpdated",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" }
+    ],
+    "name": "applyForGig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" }
+    ],
+    "name": "closeGig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" }
+    ],
+    "name": "confirmComplete",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_rootHash", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" },
+      { "internalType": "uint256", "name": "_budget", "type": "uint256" }
+    ],
+    "name": "createGig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" }
+    ],
+    "name": "getGigApplicants",
+    "outputs": [
+      { "internalType": "address[]", "name": "", "type": "address[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" }
+    ],
+    "name": "getGigInfo",
+    "outputs": [
+      { "internalType": "address", "name": "client", "type": "address" },
+      { "internalType": "address", "name": "hiredArtisan", "type": "address" },
+      { "internalType": "uint256", "name": "paymentId", "type": "uint256" },
+      { "internalType": "bytes32", "name": "rootHash", "type": "bytes32" },
+      { "internalType": "bool", "name": "artisanComplete", "type": "bool" },
+      { "internalType": "bool", "name": "isCompleted", "type": "bool" },
+      { "internalType": "bool", "name": "isClosed", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getLatestRootHash",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gigCounter",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "gigs",
+    "outputs": [
+      { "internalType": "address", "name": "client", "type": "address" },
+      { "internalType": "address", "name": "hiredArtisan", "type": "address" },
+      { "internalType": "uint256", "name": "paymentId", "type": "uint256" },
+      { "internalType": "bytes32", "name": "databaseId", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "rootHash", "type": "bytes32" },
+      { "internalType": "bool", "name": "artisanComplete", "type": "bool" },
+      { "internalType": "bool", "name": "isCompleted", "type": "bool" },
+      { "internalType": "bool", "name": "isClosed", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" },
+      { "internalType": "address", "name": "_artisan", "type": "address" }
+    ],
+    "name": "hireArtisan",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "name": "indexes",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" }
+    ],
+    "name": "markComplete",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "paymentProcessor",
+    "outputs": [
+      {
+        "internalType": "contract PaymentProcessor",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "registry",
+    "outputs": [
+      { "internalType": "contract Registry", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "_newRootHash", "type": "bytes32" }
+    ],
+    "name": "updateGigInfo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

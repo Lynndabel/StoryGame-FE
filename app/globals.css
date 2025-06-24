@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --wui-color-inherit: #F9F1E2 !important;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+html, body {
+  overflow: auto;
+  /* scrollbar-width: none; */
+}
+
+html::-webkit-scrollbar {
+  /* display: none; */
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar */
+  background-color: transparent; /* Transparent scrollbar background */
+  border-radius: 10px; /* Rounded corners for the scrollbar */
+  margin: 2px; /* Space around the scrollbar */
+  border: 2px solid transparent; /* Space around the scrollbar */
+  background-clip: content-box; /* Ensures the border doesn't cover the scrollbar */
+ }
+ 
+ ::-webkit-scrollbar-track {
+  background: transparent; /* Transparent scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+  margin: 2px; /* Space around the track */
+  border: 2px solid transparent; /* Space around the track */
+  background-clip: content-box; /* Ensures the border doesn't cover the track */
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+  background-color: #262208; /* Semi-transparent scrollbar thumb */
+  border-radius: 10px;
+  border: 2px solid transparent; /* Space around the thumb */
+  background-clip: content-box; /* Ensures the border doesn't cover the thumb */
+ }
+
+ .connect {
+  --local-color: black !important; /* Change text or button color */
+}

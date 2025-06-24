@@ -1,0 +1,124 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_gigMarketplace",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "conversationId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "rootHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "ConversationStarted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "conversationId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "newRootHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "ConversationUpdated",
+    "type": "event"
+  },
+  {
+    "inputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "name": "conversations",
+    "outputs": [
+      { "internalType": "bytes32", "name": "rootHash", "type": "bytes32" },
+      { "internalType": "bool", "name": "isActive", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_conversationId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getConversationDetails",
+    "outputs": [
+      { "internalType": "bytes32", "name": "rootHash", "type": "bytes32" },
+      { "internalType": "bool", "name": "isActive", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gigMarketplace",
+    "outputs": [
+      {
+        "internalType": "contract GigMarketplace",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_conversationId",
+        "type": "bytes32"
+      },
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" },
+      {
+        "internalType": "bytes32",
+        "name": "_initialRootHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "startConversation",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_conversationId",
+        "type": "bytes32"
+      },
+      { "internalType": "bytes32", "name": "_databaseId", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "_newRootHash", "type": "bytes32" }
+    ],
+    "name": "updateConversation",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
