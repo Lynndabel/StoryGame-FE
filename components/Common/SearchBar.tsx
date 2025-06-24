@@ -1,14 +1,7 @@
 // src/components/common/SearchBar.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MdSearch,
-  MdClear,
-  MdHistory,
-  MdTrendingUp,
-  MdAutoStories,
-  MdPerson
-} from 'react-icons/md';
+import { MdSearch, MdClear, MdHistory, MdTrendingUp, MdAutoStories, MdPerson } from 'react-icons/md';
 import { Button } from '../UI/Button';
 import { Badge } from '../UI/Badge';
 
