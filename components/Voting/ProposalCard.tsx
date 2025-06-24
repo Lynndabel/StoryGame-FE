@@ -2,22 +2,20 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  MdHowToVote,
+import {  MdHowToVote,
   MdPerson,
   MdAccessTime,
   MdVisibility,
   MdThumbUp,
   MdThumbDown,
-  MdSchedule,
   MdCheckCircle,
   MdCancel,
   MdTrendingUp
 } from 'react-icons/md';
 import { FiClock, FiUsers } from 'react-icons/fi';
-import { Card } from '../ui/Card';
-import { Badge } from '../ui/Badge';
-import { Button } from '../ui/Button';
+import { Card } from '../UI/Card';
+import { Badge } from '../UI/Badge';
+import { Button } from '../UI/Button';
 
 interface ProposalCardProps {
   proposal: {
@@ -122,7 +120,7 @@ export const ProposalCard: React.FC<ProposalCardProps> = ({
               <div className="flex items-center space-x-2 mb-1">
                 <h3 className="text-white font-medium truncate">{proposal.title}</h3>
                 <Badge 
-                  variant={getStatusColor(proposal.status) as any} 
+                  variant={getStatusColor(proposal.status) as 'success' | 'warning' | 'error' | 'info'} 
                   size="sm"
                 >
                   {proposal.status}
@@ -202,7 +200,7 @@ export const ProposalCard: React.FC<ProposalCardProps> = ({
             </div>
             <div>
               <div className="flex items-center space-x-2">
-                <Badge variant={getStatusColor(proposal.status) as any} size="sm">
+                <Badge variant={getStatusColor(proposal.status) as 'success' | 'warning' | 'error' | 'info'} size="sm">
                   {proposal.status}
                 </Badge>
                 <Badge variant="info" size="sm">
