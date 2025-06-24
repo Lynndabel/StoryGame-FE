@@ -1,7 +1,7 @@
 // src/components/story/ChapterCard.tsx
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+//import { motion } from 'framer-motion';
 import {  MdPerson, MdAccessTime, MdHowToVote, MdVisibility, MdStar,MdLock, MdCheckCircle} from 'react-icons/md';
 import { Card } from '../UI/Card';
 import { Badge } from '../UI/Badge';
