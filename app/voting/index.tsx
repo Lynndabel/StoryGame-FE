@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdAdd, MdHowToVote, MdPending, MdCheckCircle } from 'react-icons/md';
 import { Layout } from '@/components/layout/Layout';
-import { Button } from '@/components/ui/Button';
-import { ProposalCard } from '@/components/voting/ProposalCard';
-import { FilterTabs } from '@/components/common/FilterTabs';
-import { Loading } from '@/components/ui/Loading';
+import { Button } from '@/components/UI/Button';
+import { ProposalCard } from '@/components/Voting/ProposalCard';
+import { FilterTabs } from '@/components/Common/FilterTabs';
+import { Loading } from '@/components/UI/Loading';
 import { useVoting } from '@/utils/hooks/useVoting';
 
 const VotingPage: React.FC = () => {

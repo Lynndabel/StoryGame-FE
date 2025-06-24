@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdAdd, MdFilterList, MdSort } from 'react-icons/md';
 import { Layout } from '@/components/layout/Layout';
-import { Button } from '@/components/ui/Button';
-import { StoryList } from '@/components/story/StoryList';
-import { FilterTabs } from '@/components/common/FilterTabs';
-import { SearchBar } from '@/components/common/SearchBar';
+import { Button } from '@/components/UI/Button';
+import { StoryList } from '@/components/Story/StoryList';
+import { FilterTabs } from '@/components/Common/FilterTabs';
+import { SearchBar } from '@/components/Common/SearchBar';
 import { useStories } from '@/utils/hooks/useStories';
 
 const StoriesPage: React.FC = () => {
