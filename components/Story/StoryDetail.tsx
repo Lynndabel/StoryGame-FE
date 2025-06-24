@@ -1,19 +1,8 @@
 // src/components/story/StoryDetail.tsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  MdPerson,
-  MdAccessTime,
-  MdVisibility,
-  MdHowToVote,
-  MdBookmark,
-  MdBookmarkBorder,
-  MdShare,
-  MdFlag,
-  MdEdit,
-  MdAutoStories,
-  MdTrendingUp
-} from 'react-icons/md';
+import { MdPerson, MdAccessTime, MdVisibility, MdHowToVote, MdBookmark, MdBookmarkBorder, MdShare,
+  MdFlag, MdEdit, MdAutoStories, MdTrendingUp } from 'react-icons/md';
 import { FiExternalLink, FiUsers } from 'react-icons/fi';
 import { Card } from '../UI/Card';
 import { Badge } from '../UI/Badge';
