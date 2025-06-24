@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { motion } from 'framer-motion';
-import { MdTitle, MdDescription, MdCloudUpload, MdCategory, MdAccountBalanceWallet,
+import { MdTitle, MdCloudUpload, MdAccountBalanceWallet,
   MdInfo, MdWarning } from 'react-icons/md';
 import { Button } from '../UI/Button';
 import { Input } from '../UI/Input';
@@ -23,7 +23,7 @@ const proposalSchema = z.object({
 type ProposalFormData = z.infer<typeof proposalSchema>;
 
 interface CreateProposalFormProps {
-  storyId: string;
+
   storyTitle: string;
   currentChapter: number;
   submissionFee: number; // in ETH
@@ -33,7 +33,6 @@ interface CreateProposalFormProps {
 }
 
 export const CreateProposalForm: React.FC<CreateProposalFormProps> = ({
-  storyId,
   storyTitle,
   currentChapter,
   submissionFee,
@@ -49,7 +48,6 @@ export const CreateProposalForm: React.FC<CreateProposalFormProps> = ({
     handleSubmit,
     formState: { errors },
     watch,
-    setValue,
   } = useForm<ProposalFormData>({
     resolver: zodResolver(proposalSchema),
     defaultValues: {
@@ -118,7 +116,7 @@ export const CreateProposalForm: React.FC<CreateProposalFormProps> = ({
           <div>
             <h1 className="text-2xl font-bold text-white">Create Proposal</h1>
             <p className="text-dark-300">
-              Submit a new chapter proposal for "{storyTitle}"
+              Submit a new chapter proposal for {storyTitle}
             </p>
           </div>
           <Badge variant="primary" size="lg">
