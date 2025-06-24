@@ -3,13 +3,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MdViewModule, MdViewList } from 'react-icons/md';
-import { StoryCard } from '../Story/StoryCard';
-import { Story } from '../Type/Index';
+import { UserProfileStoryCard } from './UserProfileStoryCard';
+import { StoryCardWrapper } from './StoryCardWrapper';
+import { Story, UserProfileStory } from '../../types/story';
+import { isUserProfileStory } from '@/utils/typeguards'; // Correct path from components/Story/StoryList.tsx
 import { Button } from '../UI/Button';
 import { Loading } from '../UI/Loading';
 
 interface StoryListProps {
-  stories: Story[];
+  stories: (Story | UserProfileStory)[];
   loading?: boolean;
   error?: string;
   showFeatured?: boolean;
@@ -95,7 +97,11 @@ export const StoryList: React.FC<StoryListProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <StoryCard story={story} variant="featured" />
+                {isUserProfileStory(story) ? (
+                  <UserProfileStoryCard story={story} />
+                ) : (
+                  <StoryCardWrapper story={story} variant="featured" />
+                )}
               </motion.div>
             ))}
           </div>
@@ -176,10 +182,14 @@ export const StoryList: React.FC<StoryListProps> = ({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <StoryCard 
-                story={story} 
-                variant={viewMode === 'list' ? 'compact' : 'default'} 
-              />
+              {isUserProfileStory(story) ? (
+                <UserProfileStoryCard story={story} />
+              ) : (
+                <StoryCardWrapper 
+                  story={story} 
+                  variant={viewMode === 'list' ? 'compact' : 'default'} 
+                />
+              )}
             </motion.div>
           ))}
         </motion.div>

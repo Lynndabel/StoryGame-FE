@@ -1,7 +1,7 @@
 // src/components/story/StoryCard.tsx
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+//import { motion } from 'framer-motion';
 import { 
   MdAutoStories,
   MdPerson,
@@ -12,9 +12,9 @@ import {
   MdHowToVote
 } from 'react-icons/md';
 import { FiTrendingUp } from 'react-icons/fi';
-import { Card } from '../ui/Card';
-import { Badge } from '../ui/Badge';
-import { Button } from '../ui/Button';
+import { Card } from '../UI/Card';
+import { Badge } from '../UI/Badge';
+import { Button } from '../UI/Button';
 
 interface StoryCardProps {
   story: {

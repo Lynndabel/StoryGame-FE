@@ -3,10 +3,8 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { motion } from 'framer-motion';
 import { 
   MdCloudUpload,
-  MdImage,
   MdDescription,
   MdTitle,
   MdCategory
@@ -42,7 +40,6 @@ export const CreateStoryForm: React.FC<CreateStoryFormProps> = ({ onSubmit, load
     handleSubmit,
     formState: { errors },
     watch,
-    setValue,
   } = useForm<StoryFormData>({
     resolver: zodResolver(storySchema),
     defaultValues: {
@@ -73,7 +70,7 @@ export const CreateStoryForm: React.FC<CreateStoryFormProps> = ({ onSubmit, load
   };
 
   const watchedContent = watch('firstChapterContent', '');
-  const wordCount = watchedContent.split(' ').filter(word => word.length > 0).length;
+  const wordCount = watchedContent.split(' ').filter((word: string) => word.length > 0).length;
   const estimatedReadTime = Math.max(1, Math.ceil(wordCount / 200));
 
   return (

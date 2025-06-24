@@ -9,11 +9,12 @@ import {
   MdSettings,
   MdNotifications
 } from 'react-icons/md';
-import { ProfileCard } from './ProfileCard';
 import { UserStats } from './UserStats';
 import { StoryList } from '../story/StoryList';
-import { Button } from '../ui/Button';
-import { Card } from '../ui/Card';
+import { Button } from '../UI/Button';
+import { UserProfileStory } from '../../types/story';
+import { Card } from '../UI/Card';
+import { ProfileCard } from './ProfileCard';
 
 interface UserProfileProps {
   user: {
@@ -34,8 +35,16 @@ interface UserProfileProps {
     followers: number;
     following: number;
   };
-  stats: any;
-  stories: any[];
+  stats: {
+    totalStories: number;
+    totalFollowers: number;
+    totalFollowing: number;
+    totalLikes: number;
+    storiesCreated: number;
+    totalVotes: number;
+    bookmarks: number;
+  };
+  stories: UserProfileStory[];
   isOwnProfile?: boolean;
 }
 
@@ -124,7 +133,7 @@ export const UserProfile: React.FC<UserProfileProps> = ({
             <MdHowToVote className="w-16 h-16 mx-auto mb-4 text-dark-400" />
             <h3 className="text-white font-semibold text-lg mb-2">Voting History</h3>
             <p className="text-dark-300 mb-4">
-              View all the proposals you've voted on and track your voting impact.
+              View all the proposals you have voted on and track your voting impact.
             </p>
             <Button variant="primary">
               View Voting History

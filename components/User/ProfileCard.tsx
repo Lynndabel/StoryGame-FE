@@ -5,14 +5,13 @@ import {
   MdEdit,
   MdVerified,
   MdLocationOn,
-  MdLink,
   MdCalendarToday,
   MdMoreVert
 } from 'react-icons/md';
 import { FiTwitter, FiGithub, FiGlobe } from 'react-icons/fi';
-import { Card } from '../ui/Card';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
+import { Card } from '../UI/Card';
+import { Button } from '../UI/Button';
+import { Badge } from '../UI/Badge';
 
 interface ProfileCardProps {
   profile: {
