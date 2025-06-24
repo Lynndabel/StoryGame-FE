@@ -9,8 +9,8 @@ import {
   MdAutoStories,
   MdPerson
 } from 'react-icons/md';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
+import { Button } from '../UI/Button';
+import { Badge } from '../UI/Badge';
 
 interface SearchResult {
   id: string;

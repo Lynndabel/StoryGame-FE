@@ -2,7 +2,7 @@
 // src/components/story/StoryList.tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MdViewModule, MdViewList, MdSort, MdFilterList } from 'react-icons/md';
+import { MdViewModule, MdViewList } from 'react-icons/md';
 import { StoryCard } from '../Story/StoryCard';
 import { Story } from '../Type/Index';
 import { Button } from '../UI/Button';

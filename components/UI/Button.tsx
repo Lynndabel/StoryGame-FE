@@ -10,6 +10,7 @@ interface ButtonProps extends HTMLMotionProps<'button'> {
   iconPosition?: 'left' | 'right';
   loading?: boolean;
   fullWidth?: boolean;
+  href?: string;
   children?: React.ReactNode;
 }
 
@@ -23,6 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   className = '',
   disabled,
+  href,
   ...props
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-900 disabled:opacity-50 disabled:cursor-not-allowed';
@@ -49,30 +51,46 @@ export const Button: React.FC<ButtonProps> = ({
     xl: 'w-6 h-6',
   };
 
-  return (
-    <motion.button
-      whileHover={{ scale: variant === 'gradient' ? 1.05 : 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className={`
+  const classes = `
         ${baseClasses}
         ${variants[variant]}
         ${sizes[size]}
         ${fullWidth ? 'w-full' : ''}
         ${className}
-      `}
+      `;
+  const content = loading ? (
+    <div className={`animate-spin rounded-full border-2 border-current border-t-transparent ${iconSizes[size]}`} />
+  ) : (
+    <>
+      {Icon && iconPosition === 'left' && <Icon className={iconSizes[size]} />}
+      {children}
+      {Icon && iconPosition === 'right' && <Icon className={iconSizes[size]} />}
+    </>
+  );
+
+  if (href) {
+    return (
+      <motion.a
+        href={href}
+        whileHover={{ scale: variant === 'gradient' ? 1.05 : 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        className={classes}
+        {...(props as HTMLMotionProps<'a'>)}
+      >
+        {content}
+      </motion.a>
+    );
+  }
+
+  return (
+    <motion.button
+      whileHover={{ scale: variant === 'gradient' ? 1.05 : 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className={classes}
       disabled={disabled || loading}
       {...props}
     >
-      {loading ? (
-        <div className={`animate-spin rounded-full border-2 border-current border-t-transparent ${iconSizes[size]}`} />
-      ) : (
-        <>
-          {Icon && iconPosition === 'left' && <Icon className={iconSizes[size]} />}
-          {children}
-          {Icon && iconPosition === 'right' && <Icon className={iconSizes[size]} />}
-        </>
-      )}
+      {content}
     </motion.button>
   );
 };
-

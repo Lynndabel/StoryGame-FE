@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { IconType } from 'react-icons';
-import { Badge } from '../ui/Badge';
+import { Badge } from '../UI/Badge';
 
 interface FilterTab {
   id: string;

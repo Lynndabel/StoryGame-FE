@@ -1,13 +1,8 @@
 // src/components/common/Pagination.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  MdChevronLeft,
-  MdChevronRight,
-  MdFirstPage,
-  MdLastPage
-} from 'react-icons/md';
-import { Button } from '../ui/Button';
+import { MdChevronLeft, MdChevronRight, MdFirstPage, MdLastPage } from 'react-icons/md';
+import { Button } from '../UI/Button';
 
 interface PaginationProps {
   currentPage: number;
