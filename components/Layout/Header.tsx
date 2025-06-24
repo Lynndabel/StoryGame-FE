@@ -13,16 +13,11 @@ import {
   FiSettings,
   FiLogOut
 } from 'react-icons/fi';
-import { 
-  MdAutoStories,
-  MdHowToVote,
-  MdCreate,
-  MdExplore
-} from 'react-icons/md';
-import { Button } from '../ui/Button';
-import { Input } from '../ui/Input';
-import { Badge } from '../ui/Badge';
-import { WalletConnect } from '../user/WalletConnect';
+import { MdAutoStories, MdHowToVote, MdCreate, MdExplore } from 'react-icons/md';
+import { Button } from '../UI/Button';
+import { Input } from '../UI/Input';
+import { Badge } from '../UI/Badge';
+import { WalletConnect } from '../User/WalletConnect';
 
 interface HeaderProps {
   onMenuToggle: () => void;

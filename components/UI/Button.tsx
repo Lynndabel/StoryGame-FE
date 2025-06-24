@@ -10,7 +10,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   iconPosition?: 'left' | 'right';
   loading?: boolean;
   fullWidth?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const Button: React.FC<ButtonProps> = ({
