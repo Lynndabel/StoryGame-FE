@@ -136,7 +136,7 @@ export const UserStats: React.FC<UserStatsProps> = ({ stats, showDetailed = fals
       <Card className="p-6">
         <h4 className="text-lg font-semibold text-white mb-4">Reading Activity</h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {readerStats.map((stat, index) => (
+          {readerStats.map((stat) => (
             <div key={stat.label} className="text-center p-4 bg-dark-800 rounded-xl">
               <stat.icon className="w-6 h-6 mx-auto mb-2 text-accent-400" />
               <div className="text-xl font-bold text-white mb-1">
@@ -152,7 +152,7 @@ export const UserStats: React.FC<UserStatsProps> = ({ stats, showDetailed = fals
       <Card className="p-6">
         <h4 className="text-lg font-semibold text-white mb-4">Community</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {socialStats.map((stat, index) => (
+          {socialStats.map((stat) => (
             <div key={stat.label} className="text-center p-4 bg-dark-800 rounded-xl">
               <stat.icon className="w-6 h-6 mx-auto mb-2 text-secondary-400" />
               <div className="text-xl font-bold text-white mb-1">
