@@ -4,7 +4,7 @@ import { IconType } from 'react-icons';
 
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info';
+  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   icon?: IconType;
   className?: string;
@@ -24,6 +24,7 @@ export const Badge: React.FC<BadgeProps> = ({
     warning: 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30',
     error: 'bg-red-500/20 text-red-300 border-red-500/30',
     info: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
+    ghost: 'bg-transparent text-dark-300 border-transparent',
   };
 
   const sizes = {
