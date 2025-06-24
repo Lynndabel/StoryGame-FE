@@ -2,16 +2,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {  MdHowToVote,
-  MdPerson,
-  MdAccessTime,
-  MdVisibility,
-  MdThumbUp,
-  MdThumbDown,
-  MdCheckCircle,
-  MdCancel,
-  MdTrendingUp
-} from 'react-icons/md';
+import {  MdHowToVote, MdPerson, MdAccessTime, MdVisibility, MdThumbUp,
+  MdThumbDown, MdCheckCircle, MdCancel, MdTrendingUp } from 'react-icons/md';
 import { FiClock, FiUsers } from 'react-icons/fi';
 import { Card } from '../UI/Card';
 import { Badge } from '../UI/Badge';
