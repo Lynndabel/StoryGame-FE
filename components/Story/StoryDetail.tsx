@@ -1,12 +1,13 @@
 // src/components/story/StoryDetail.tsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MdPerson, MdAccessTime, MdVisibility, MdHowToVote, MdBookmark, MdBookmarkBorder, MdShare,
-  MdFlag, MdEdit, MdAutoStories, MdTrendingUp } from 'react-icons/md';
+import { MdPerson, MdAccessTime, MdHowToVote, MdBookmark, MdBookmarkBorder, MdShare,
+  MdFlag, MdTrendingUp } from 'react-icons/md';
 import { FiExternalLink, FiUsers } from 'react-icons/fi';
 import { Card } from '../UI/Card';
 import { Badge } from '../UI/Badge';
 import { Button } from '../UI/Button';
+import { Chapter } from '@/types';
 import { ChapterList } from './ChapterList';
 
 interface StoryDetailProps {
@@ -39,7 +40,7 @@ interface StoryDetailProps {
       totalVotes: number;
     }>;
   };
-  chapters: Array<any>;
+  chapters: Chapter[];
   onBookmark?: () => void;
   onFollow?: () => void;
   onVote?: () => void;
@@ -241,7 +242,6 @@ export const StoryDetail: React.FC<StoryDetailProps> = ({
         {activeTab === 'chapters' && (
           <ChapterList 
             chapters={chapters} 
-            storyId={story.id}
             canCreateChapter={true}
             onCreateChapter={onCreateChapter}
           />

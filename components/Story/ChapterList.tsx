@@ -1,14 +1,14 @@
 // src/components/story/ChapterList.tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MdViewList, MdViewModule, MdSort, MdFilterList, MdPlaylistAdd } from 'react-icons/md';
+import { MdViewList, MdViewModule, MdPlaylistAdd } from 'react-icons/md';
+import { Chapter } from '../Type/Index';
 import { ChapterCard } from './ChapterCard';
 import { Button } from '../UI/Button';
 import { Loading } from '../UI/Loading';
 
 interface ChapterListProps {
-  chapters: Array<any>;
-  storyId: string;
+  chapters: Chapter[];
   loading?: boolean;
   canCreateChapter?: boolean;
   onCreateChapter?: () => void;
@@ -16,7 +16,6 @@ interface ChapterListProps {
 
 export const ChapterList: React.FC<ChapterListProps> = ({
   chapters,
-  storyId,
   loading = false,
   canCreateChapter = false,
   onCreateChapter,
