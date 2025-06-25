@@ -1,3 +1,4 @@
+'use client';
 // src/pages/index.tsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -9,19 +10,24 @@ import {
   MdPeople,
   MdTimeline
 } from 'react-icons/md';
-import { Layout } from '@/components/layout/Layout';
-import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { StoryList } from '@/components/story/StoryList';
-import { useStories } from '@/utils/hooks/useStories';
-import { useWeb3Context } from '@/context/Web3Context';
+import { Layout } from '../components/Layout/Layout';
+import { Button } from '../components/UI/Button';
+import { Card } from '../components/UI/Card';
+import { Badge } from '../components/UI/Badge';
+import { StoryList } from '../components/Story/StoryList';
+import { Story, UserProfileStory } from '../types/story';
+// import { useStories } from '../utils/hooks/useStories';
+// import { useWeb3Context } from '../context/Web3Context';
 
 const HomePage: React.FC = () => {
-  const { isConnected } = useWeb3Context();
-  const { stories, loading } = useStories({ limit: 6 });
+  // const { isConnected } = useWeb3Context();
+  // const { stories, loading } = useStories({ limit: 6 });
   
-  const [stats, setStats] = useState({
+  // TODO: Remove the placeholder states once the useStories hook is available
+  const [stories] = useState<(Story | UserProfileStory)[]>([]);
+  const [loading] = useState(false);
+  
+  const [stats] = useState({
     totalStories: 1247,
     activeVotes: 23,
     totalAuthors: 856,
