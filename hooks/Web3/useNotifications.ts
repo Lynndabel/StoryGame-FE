@@ -1,6 +1,6 @@
 // src/utils/hooks/useNotifications.ts
 import { useState, useCallback } from 'react';
-import toast from 'react-hot-toast';
+import { toast } from 'sonner';
 
 export type NotificationType = 'success' | 'error' | 'info' | 'warning';
 
