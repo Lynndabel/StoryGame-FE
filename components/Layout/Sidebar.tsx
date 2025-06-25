@@ -27,7 +27,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
   ];
 
   const discoverItems = [
-    { href: '/trending', label: 'Trending', icon: MdTrending },
+    { href: '/trending', label: 'Trending', icon: MdTrendingUp },
     { href: '/popular', label: 'Popular', icon: FiTrendingUp },
     { href: '/featured', label: 'Featured', icon: FiAward },
     { href: '/authors', label: 'Top Authors', icon: FiUsers },
