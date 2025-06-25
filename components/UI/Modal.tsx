@@ -1,4 +1,3 @@
-// src/components/ui/Modal.tsx
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MdClose } from 'react-icons/md';

@@ -1,4 +1,3 @@
-// src/components/user/UserProfile.tsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
