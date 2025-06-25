@@ -7,12 +7,12 @@ import {
   MdHowToVote,
   MdCreate,
   MdExplore,
-  MdTrending,
+  MdTrendingUp,
   MdBookmark,
   MdHistory
 } from 'react-icons/md';
 import { FiUsers, FiTrendingUp, FiAward } from 'react-icons/fi';
-import { Badge } from '../ui/Badge';
+import { Badge } from '../UI/Badge';
 
 interface SidebarProps {
   isOpen: boolean;
