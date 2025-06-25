@@ -18,8 +18,8 @@ export const Footer: React.FC = () => {
       { label: 'Roadmap', href: '/roadmap' },
     ],
     Community: [
-      { label: 'Discord', href: 'https://discord.gg/storydao' },
-      { label: 'Twitter', href: 'https://twitter.com/storydao' },
+      { label: 'Discord', href: 'https://discord.com' },
+      { label: 'Twitter', href: 'https://x.com' },
       { label: 'Blog', href: '/blog' },
       { label: 'Forum', href: '/forum' },
     ],
