@@ -3,7 +3,9 @@ import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 import { liskSepolia } from '@reown/appkit/networks'
 
 // Get projectId from https://cloud.reown.com
-export const projectId = process.env.PROJECT_ID;
+// Try to get the project ID from env variables. Use NEXT_PUBLIC_ prefix so that the value is
+// injected into client-side bundles by Next.js. Fallback to PROJECT_ID for server-side use.
+export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID ?? process.env.PROJECT_ID;
 
 if (!projectId) {
   throw new Error('Project ID is not defined')

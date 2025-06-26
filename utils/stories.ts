@@ -1,6 +1,6 @@
 // src/utils/api/stories.ts
 import axios from 'axios';
-import { Story, Chapter, CreateStoryRequest, ApiResponse, QueryParams } from '@/types';
+import { Story, Chapter, CreateStoryRequest, ApiResponse, QueryParams, SearchFilters } from '@/types';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
@@ -86,7 +86,7 @@ export const storiesApi = {
   },
 
   // Search stories
-  async searchStories(query: string, filters?: Record<string, any>): Promise<ApiResponse<Story[]>> {
+  async searchStories(query: string, filters?: SearchFilters): Promise<ApiResponse<Story[]>> {
     const response = await api.get('/stories/search', {
       params: { q: query, ...filters }
     });
